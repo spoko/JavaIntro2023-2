@@ -1,5 +1,7 @@
 package edu.oop;
 
+import edu.enumDemo.MonthsOfTheYear;
+
 public class Test {
     public static void main(String[] args) {
         //Dog huski = new Dog();
@@ -18,17 +20,17 @@ public class Test {
                 "lower back issues");
 
         Dog balkan = new Dog(germanShepardBreed, "male", (byte) 3, "black",
-                45.53f, "Balkan", levskiGAddress, true);
+                45.53f, "Balkan", levskiGAddress, true, MonthsOfTheYear.FEBRUARY);
 
         Dog huski = new Dog(huskiBreed, "male", (byte) 5, "white",
-                45.53f, "Alis", levskiGAddress, true);
+                45.53f, "Alis", levskiGAddress, true, MonthsOfTheYear.JANUARY);
         System.out.println(balkan);
         
         //calling the methods i.e. doing some actions with the object(s)
-        huski.setBreed(huskiBreed);//breed = "Huski";
+        //huski.setBreed(huskiBreed);//breed = "Huski";
         huski.setName("Alis"); //name = "Alis";
         huski.setWeight(45.34f);//weight = 45.34f;
-        huski.setSex("female");//sex = "female";
+        //huski.setSex("female");//sex = "female";
         huski.setColor("brown");//color = "brown";
         huski.setAge((byte) 5);//age = 5;
 

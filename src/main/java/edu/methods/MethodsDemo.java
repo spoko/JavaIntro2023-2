@@ -10,6 +10,7 @@ public class MethodsDemo {
         System.out.println(getTheSecret());
         sum(5,6);
         sum(7,4,6);
+        sum(sum(5,2), sum(5,7,2));//homework 6 example
 
         Dog sharo = getADog("Sharo");
         Pet somePet = getADog("SomePetName");//Dog is a Pet

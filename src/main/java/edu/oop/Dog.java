@@ -1,5 +1,7 @@
 package edu.oop;
 
+import edu.enumDemo.MonthsOfTheYear;
+
 public class Dog extends Pet{
     //instance variable i.e. fields:
     private boolean hasTail; //specific characteristics for the Dogs
@@ -15,8 +17,8 @@ public class Dog extends Pet{
 
     //constructors
     public Dog(Breed breed, String sex, byte age, String color, float weight,
-               String name, Address address, boolean hasTail){
-        super(breed, sex, age, color, weight, name, address);//calling constructor of the super (or parent) class
+               String name, Address address, boolean hasTail, MonthsOfTheYear birtMonth){
+        super(breed, sex, age, color, weight, name, address, birtMonth);//calling constructor of the super (or parent) class
         this.hasTail = hasTail;
     }
 

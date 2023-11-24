@@ -1,5 +1,7 @@
 package edu.oop;
 
+import edu.enumDemo.MonthsOfTheYear;
+
 public class Pet {
     //fields or instance variable
     private Breed breed;//composition
@@ -9,13 +11,22 @@ public class Pet {
     private float weight;
     private String name;
     private Address address;//aggregation
+    private MonthsOfTheYear birthMonth;
 
     //properties (special methods - setters and getters)
     public Breed getBreed() {
         return breed;
     }
 
-    public void setBreed(Breed breed) {
+    public MonthsOfTheYear getBirthMonth() {
+        return birthMonth;
+    }
+
+    private void setBirthMonth(MonthsOfTheYear birthMonth) {
+        this.birthMonth = birthMonth;
+    }
+
+    private void setBreed(Breed breed) {
         if (!breed.equals(null)){
             this.breed = breed;
         }else {
@@ -27,7 +38,7 @@ public class Pet {
         return sex;
     }
 
-    public void setSex(String sex) {
+    private void setSex(String sex) {
         if (!sex.isEmpty()){
             this.sex = sex;
         }else {
@@ -97,7 +108,7 @@ public class Pet {
 
     //constructors
     public Pet(Breed breed, String sex, byte age, String color, float weight, String name,
-               Address address){
+               Address address, MonthsOfTheYear monthsOfTheYear){
        setBreed(breed);
         setSex(sex);
         setAge(age);
@@ -105,6 +116,7 @@ public class Pet {
         setWeight(weight);
         setName(name);
         setAddress(address);
+        setBirthMonth(monthsOfTheYear);
     }
 
     //default constructor
@@ -123,6 +135,6 @@ public class Pet {
 
     public void printData(){
         System.out.printf("%s is %d years old and weights %f kg. It is from %s sex, the color is %s" +
-                ", the breed is %s.\n", name, age, weight, sex, color, breed);
+                ", the breed is %s. Birt month is %s\n", name, age, weight, sex, color, breed, birthMonth);
     }
 }
