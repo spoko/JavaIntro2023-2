@@ -1,6 +1,6 @@
 package edu.encapsulation;
 
-public class Test {
+class Test {
     public static void main(String[] args) {
         Person elena = new Person("Elena", 11);
         Person alex = new Person("Alex", 4 );
